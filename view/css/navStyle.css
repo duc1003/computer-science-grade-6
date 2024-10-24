@@ -1,0 +1,80 @@
+
+/* css for nav */
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    background-color: #46b1e1;
+    align-items: center;
+    position: fixed;
+    opacity: 0.9;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    left: 0;
+}
+.nav__center__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+#nav__logo {
+    margin-left: 40px;
+    font-size: 16px;
+    font-weight: 800;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+#nav__center {
+    width: 50%;
+}
+.nav__center__content>li {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.nav__center__content a{
+    color: white;
+}
+#nav__login {
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 50px;
+    a {
+        color: black;
+    }
+}
+
+.nav__center__content__head {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+
+.detail>h4 {
+    text-decoration: underline;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.detail__story {
+    text-decoration: underline;
+}
+
+.detail>li {
+    margin-bottom: 13px;
+    font-size: 15px;
+    font-weight: 600;
+}

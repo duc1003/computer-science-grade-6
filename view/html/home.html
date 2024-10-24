@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/home.css" />"
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(() =>{
+          $("#navContainer").load("./navigation.html");
+          $("#footerContainer").load("./footer.html");
+        }) 
+      </script>
+      <link rel="stylesheet" href="../css/navStyle.css">
+      <link rel="stylesheet" href="../css/FooterStyle.css">
+      <!-- link font-family -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Balinese:wght@700&display=swap" rel="stylesheet">
+      <!-- kits use for icon -->
+      <script src="https://kit.fontawesome.com/1ecb12ccc1.js" crossorigin="anonymous"></script>
+      <script>
+        $(() =>{
+          $("#navContainer").load("./Navigation.html");
+          $("#footerContainer").load("./Footer.html");
+        }) 
+      </script>
 </head>
 <body>
+    <div id="navContainer"></div>
+    <div class="content"></div>
+    <div id="footerContainer"></div>
     
 </body>
 </html>

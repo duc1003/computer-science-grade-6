@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - CoffeeShop</title>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(() => {
+        $("#navContainer").load("./Navigation.html");
+        $("#footerContainer").load("./Footer.html");
+      });
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/CommonStyle.css">
+    <link rel="stylesheet" href="../css/navStyle.css">
+    <link rel="stylesheet" href="../css/FooterStyle.css">
+    <link rel="stylesheet" href="../css/login.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Balinese:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/1ecb12ccc1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div id="navContainer"></div>
+
+    <div id="login">
+        <form id="login_form">
+            <div class="login_title">
+                <h4>Đăng nhập</h4>
+            </div>
+
+            <div class="login_input">
+                <div class="login_input__child">
+                    <input type="text" placeholder="Account" id="login_account_input" name="account" /> <br>
+                    <span class="form_message"></span>
+                </div>
+
+                <div class="login_input__child">
+                    <input type="email" placeholder="Email" id="login_email_input" name="email" /> <br>
+                    <span class="form_message"></span>
+                </div>
+
+                <div class="login_input__child">
+                    <input type="password" placeholder="Password" id="login_password_input" name="password" /> <br>
+                    <span class="form_message"></span>
+                </div>
+
+                <div class="login_submit">
+                    <button type="submit" id="submit_login">Đăng nhập</button>
+                </div>
+                <div class="register">
+                    <p>Nếu bạn chưa có tài khoản thì <a href="./signup.html">đăng kí</a> tại đây!</p>
+                </div>
+            </div>
+        </form>
+        <script src="../../controller/login.js"></script>
+        <script>
+            loginValidator({
+                form: '#login_form',
+                rules: [
+                    loginValidator.isAccount('#login_account_input'),
+                    loginValidator.isEmail('#login_email_input'),
+                    loginValidator.isPassword('#login_password_input')
+                ],
+                showInformations: loginValidator.submit('#submit')
+            });
+            // Bắt sự kiện submit của form đăng ký
+            document.getElementById('login_form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Ngăn không cho trang tải lại
+
+                // Lấy dữ liệu từ các trường
+                const account = document.getElementById('signup_account_input').value;
+                const email = document.getElementById('signup_email_input').value;
+                const password = document.getElementById('signup_password_input').value;
+
+                // Tạo object chứa thông tin đăng ký
+                const signupData = {
+                    account: account,
+                    email: email,
+                    password: password
+                };
+
+                console.log("Thông tin đăng ký:", signupData);
+            });
+        </script>
+    </div>
+
+    <!-- Footer -->
+    <div id="footerContainer"></div>
+
+</body>
+
+</html>

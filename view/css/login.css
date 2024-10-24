@@ -1,0 +1,66 @@
+/* login.css */
+body {
+  font-family: 'Noto Sans Balinese', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+#login {
+  width: 100%;
+  max-width: 400px;
+  margin: 130px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login_title h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login_input {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login_input__child input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login_input__child input:focus {
+  outline: none;
+  border-color: #46b1e1;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+.login_input__child .form_message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+.login_submit button {
+  width: 100%;
+  padding: 12px;
+  background-color: #46b1e1;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login_submit button:hover {
+  background-color: #0288c6;
+}

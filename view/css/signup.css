@@ -1,0 +1,90 @@
+/* signup.css */
+body {
+    font-family: 'Noto Sans Balinese', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+#signup {
+    width: 100%;
+    max-width: 400px;
+    margin: 130px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.signup_title h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.signup_input {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signup_input__child input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.signup_input__child input:focus {
+    outline: none;
+    border-color: #46b1e1;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+.signup_input__child .form_message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.signup_submit button {
+    width: 100%;
+    padding: 12px;
+    background-color: #46b1e1;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup_submit button:hover {
+    background-color: #0288c6;
+}
+
+/* Toast Notification */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    transition: opacity 0.5s, bottom 0.5s;
+}
+
+.toast.show {
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
