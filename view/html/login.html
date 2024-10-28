@@ -11,8 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
       $(() => {
-        $("#navContainer").load("./Navigation.html");
-        $("#footerContainer").load("./Footer.html");
+        $("#navContainer").load("./navigation.html");
+        $("#footerContainer").load("./footer.html");
       });
     </script>
 
@@ -51,10 +51,10 @@
                     <span class="form_message"></span>
                 </div>
 
-                <div class="login_input__child">
+                <!-- <div class="login_input__child">
                     <input type="email" placeholder="Email" id="login_email_input" name="email" /> <br>
                     <span class="form_message"></span>
-                </div>
+                </div> -->
 
                 <div class="login_input__child">
                     <input type="password" placeholder="Password" id="login_password_input" name="password" /> <br>
@@ -85,18 +85,35 @@
                 event.preventDefault(); // Ngăn không cho trang tải lại
 
                 // Lấy dữ liệu từ các trường
-                const account = document.getElementById('signup_account_input').value;
-                const email = document.getElementById('signup_email_input').value;
-                const password = document.getElementById('signup_password_input').value;
+                const account = document.getElementById('login_account_input').value;
+                // const email = document.getElementById('login_email_input').value;
+                const password = document.getElementById('login_password_input').value;
 
                 // Tạo object chứa thông tin đăng ký
-                const signupData = {
+                const loginData = {
                     account: account,
-                    email: email,
+                    // email: email,
                     password: password
                 };
+                // Lấy dữ liệu đăng ký từ localStorage
+                const storedData = JSON.parse(localStorage.getItem('userData'));
 
-                console.log("Thông tin đăng ký:", signupData);
+                if (!storedData) {
+                    alert('Chưa có người dùng nào đăng ký!');
+                    return;
+                }
+
+                // Kiểm tra thông tin đăng nhập
+                if (account === storedData.account && password === storedData.password) {
+                    alert('Đăng nhập thành công!');
+                    // Chuyển hướng sang home.html
+                    window.location.href = 'home.html';
+                    localStorage.setItem("isUser", true);
+                } else {
+                    alert('Tài khoản hoặc mật khẩu không chính xác!');
+                }
+
+                console.log("Thông tin đăng nhập:", loginData);
             });
         </script>
     </div>

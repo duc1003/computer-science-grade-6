@@ -46,6 +46,7 @@
     color: white;
 }
 #nav__login {
+    visibility: visible;
     font-size: 18px;
     font-weight: 600;
     margin-right: 50px;
@@ -53,6 +54,15 @@
         color: black;
     }
 }
+/* .nav__login.hide{
+    visibility: hidden;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 50px;
+    a {
+        color: black;
+    }
+} */
 
 .nav__center__content__head {
     display: flex;

@@ -6,7 +6,6 @@ function signupValidator(options) {
         const isValid = [...formElement.querySelectorAll('input')].every(input =>
             !input.parentElement.classList.contains('invalid') && input.value.trim() !== ''
         );
-        submitButton.disabled = !isValid;
     }
 
     if (formElement) {
@@ -38,17 +37,22 @@ function signupValidator(options) {
                 input.value.trim() !== ''
             );
 
-            if (isValid) {
+            if (isValid) {                
                 const account = document.querySelector('#signup_account_input').value;
                 const email = document.querySelector('#signup_email_input').value;
                 const password = document.querySelector('#signup_password_input').value;
 
                 const signupData = { account, email, password };
                 console.log("Thông tin đăng ký:", signupData);
+                //lưu thông tin đăng kí
+                localStorage.setItem('userData', JSON.stringify(signupData));
 
                 showToast('Đăng ký thành công!');
+                setTimeout(() => {
+                    window.location.href = 'home.html'
+                }, 1500);
             } else {
-                showToast('Vui lòng điền đầy đủ thông tin!');
+                showToastFail('Vui lòng điền đầy đủ thông tin!');
             }
         });
     }
@@ -86,6 +90,15 @@ function showToast(message) {
     const toast = document.getElementById('toast');
     toast.textContent = message;
     toast.className = 'toast show';
+
+    setTimeout(() => {
+        toast.className = toast.className.replace('show', '');
+    }, 3000);
+}
+function showToastFail(message) {
+    const toast = document.getElementById('toastFail');
+    toast.textContent = message;
+    toast.className = 'toastFail show';
 
     setTimeout(() => {
         toast.className = toast.className.replace('show', '');

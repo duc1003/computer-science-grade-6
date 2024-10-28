@@ -11,8 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
       $(() => {
-        $("#navContainer").load("./Navigation.html");
-        $("#footerContainer").load("./Footer.html");
+        $("#navContainer").load("./navigation.html");
+        $("#footerContainer").load("./footer.html");
       });
     </script>
 
@@ -67,7 +67,7 @@
                     </div>
     
                     <div class="signup_submit">
-                        <button type="submit" id="submit_signup" disabled>Sign Up</button>
+                        <button type="submit" id="submit_signup">Sign Up</button>
                     </div>
                 </div>
             </form>
@@ -87,6 +87,7 @@
             </script>
         </div>
         <div id="toast" class="toast">Thông báo</div>
+        <div id="toastFail" class="toastFail">Thông báo</div>
     <!-- Footer -->
     <div id="footerContainer"></div>
 

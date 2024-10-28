@@ -20,7 +20,19 @@
             </li>
         </ul>
     </div>
-    <div id="nav__login">
+    <div id="nav__login" class="nav__login">
         <a href="./login.html">Đăng nhập</a>
     </div>
 </div>
+<script>
+    console.log(localStorage.getItem("isUser"));
+    
+    
+    if(localStorage.getItem("isUser")) {
+        document.getElementById("nav__login").style.visibility = "hidden";
+        console.log(document.getElementById("nav__login").style.visibility);
+    } else {
+        document.getElementById("nav__login").style.visibility = "visible";
+        console.log(document.getElementById("nav__login").style.visibility);
+    }
+</script>
