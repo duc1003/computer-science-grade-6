@@ -1,0 +1,49 @@
+#topic {
+    text-align: center;
+    color: #0097b2;
+}
+#unit {
+    text-align: center;
+    color: #ff914d;
+    font-size: 26px;
+}
+
+#title1 {
+    font-size: 21px;
+    line-height: 1.6;
+    color: #333;
+
+}
+
+.title1-smaller {
+    line-height: 1.6;
+    color: #333;
+    font-size: 18px;
+}
+
+.notice {
+    color: red;
+    text-transform: capitalize;
+    font-size: 21px;
+}
+
+#content p {
+    font-size: 21px;
+    line-height: 1.6;
+    color: #333;
+}
+.img1 {
+    display: block;
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+}
+ul {
+    margin-left: 41px;
+    list-style: none;
+    li {
+        font-size: 18px;
+    }
+}
+
+.text-italic {
+    font-style: italic;
+}

@@ -1,0 +1,35 @@
+.navbar {
+    max-height: calc(100vh - 200px); /* Giới hạn chiều cao để có thể cuộn */
+    overflow-y: auto; /* Bật cuộn dọc */
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.nav-item {
+    margin-bottom: 20px;
+}
+
+.nav-item h3 {
+    font-size: 16px;
+    color: #333;
+    background-color: #cfe2ff;
+    padding: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.nav-item a {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    padding: 5px 0;
+    padding-left: 10px;
+    transition: background 0.3s;
+}
+
+.nav-item a:hover {
+    background-color: #e0e0e0;
+}

@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#middleContent {
+    display: flex;
+    margin-top: 20px;
+}
+
+#content {
+    width: 80%;
+    margin-top: 45px;
+    margin-left: 12px;
+    max-height: calc(100vh - 170px);
+    overflow-y: auto;
+    padding-bottom: 21px;
+}
+
+#navLeftContainer {
+    width: 20%;
+}

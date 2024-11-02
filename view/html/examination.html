@@ -4,33 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/home.css" />"
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(() =>{
           $("#navContainer").load("./navigation.html");
+          $("#navLeftContainer").load("./navigationLeft.html");
           $("#footerContainer").load("./footer.html");
+          const change_practice = (value) => {
+            switch (value) {
+              case '#1':
+                $("#content").load("./practice1_topic1.html");
+                break;
+              case '#2':
+                $("#content").load("./practice2_topic1.html");
+                break;
+              case '#3':
+                $("#content").load("./practice3_topic1.html");
+                break;
+              case '#4':
+                $("#content").load("./practice4_topic2.html");
+                break;   
+              case '#5':
+                $("#content").load("./practice5_topic2.html");
+                break;     
+              case '#6':
+                $("#content").load("./practice6_topic3.html");
+                break;      
+              case '#7':
+                $("#content").load("./practice7_topic3.html");
+                break;      
+              case '#8':
+                $("#content").load("./practice8_topic3.html");
+                break;       
+              case '#9':
+                $("#content").load("./practice9_topic4.html");
+                break;       
+              case '#10':
+                $("#content").load("./practice10_topic5.html");
+                break;       
+              case '#11':
+                $("#content").load("./practice11_topic5.html");
+                break;       
+              case '#12':
+                $("#content").load("./practice12_topic5.html");
+                break;       
+              case '#13':
+                $("#content").load("./practice13_topic5.html");
+                break;       
+              case '#14':
+                $("#content").load("./practice14_topic5.html");
+                break;       
+              case '#15':
+                $("#content").load("./practice15_topic6.html");
+                break;       
+              case '#16':
+                $("#content").load("./practice16_topic6.html");
+                break;       
+              case '#17':
+                $("#content").load("./practice17_topic6.html");
+                break;
+              default:
+                $("#content").load("./practice1_topic1.html");
+                break;
+            }
+          };
+          change_practice(0);
+          window.addEventListener("hashchange", function() {
+            let newHash = window.location.hash;
+            // check have user yet?
+            // let checkHash = newHash.
+            change_practice(newHash);
+            $('#content').animate({
+              scrollTop: 0
+            }, 'fast');
+          }); 
         }) 
       </script>
       <link rel="stylesheet" href="../css/navStyle.css">
+      <link rel="stylesheet" href="../css/navigationLeft.css">
       <link rel="stylesheet" href="../css/FooterStyle.css">
       <link rel="stylesheet" href="../css/examination.css">
+      <link rel="stylesheet" href="../css/practice1_topic1.css">
       <!-- link font-family -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Balinese:wght@700&display=swap" rel="stylesheet">
       <!-- kits use for icon -->
       <script src="https://kit.fontawesome.com/1ecb12ccc1.js" crossorigin="anonymous"></script>
-      <script>
-        $(() =>{
-          $("#navContainer").load("./navigation.html");
-          $("#footerContainer").load("./footer.html");
-        }) 
-      </script>
 </head>
 <body>
     <div id="navContainer"></div>
-    <div class="content"></div>
+    <div id="middleContent">
+      <div id="navLeftContainer"></div>
+      <div id="content"></div>
+    </div>
     <div id="footerContainer"></div>
 </body>
 </html>
