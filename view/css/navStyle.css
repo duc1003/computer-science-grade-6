@@ -26,6 +26,12 @@
     margin-left: 40px;
     font-size: 16px;
     font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        margin: 3px;
+    }
 }
 .nav a{
     text-decoration: none;

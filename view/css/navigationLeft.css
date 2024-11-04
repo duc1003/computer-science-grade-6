@@ -1,5 +1,5 @@
 .navbar {
-    max-height: calc(100vh - 200px); /* Giới hạn chiều cao để có thể cuộn */
+    max-height: calc(100vh - 120px); /* Giới hạn chiều cao để có thể cuộn */
     overflow-y: auto; /* Bật cuộn dọc */
     background-color: #f0f0f0;
     border-right: 1px solid #ccc;

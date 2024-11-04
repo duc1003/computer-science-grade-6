@@ -6,5 +6,11 @@
 
 .content {
     margin: 100px;
-    height: 700px;
+    height: 430px;
+}
+.img1 {
+    display: block;
+    margin: 32px auto; /* Căn giữa theo chiều ngang */
+    width: 40%;
+    height: 300px;
 }
