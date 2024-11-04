@@ -11,7 +11,7 @@
         <a href="./examination.html">Bài học</a>
       </li>
       <li><a id="buttonPractice" href="#">Bài tập</a></li>
-      <li><a href="./home.html">Tranh tài</a></li>
+      <li><a id="buttonChallenge" href="#">Tranh tài</a></li>
       <!-- <li>
                 <div class="search">
                     <input id="search" type="text" placeholder="Tìm kiếm ..." />
@@ -37,6 +37,15 @@
   $("#buttonPractice").click(() => {
     if (localStorage.getItem("isUser")) {
       window.location.replace("./practice.html");
+    } else {
+      alert("Mục này cần phải đăng nhập mới truy cập được!");
+      window.location.replace("./login.html");
+    }
+  });
+  
+  $("#buttonChallenge").click(() => {
+    if (localStorage.getItem("isUser")) {
+      window.open("https://quizizz.com/join?gc=77091887", "_blank")
     } else {
       alert("Mục này cần phải đăng nhập mới truy cập được!");
       window.location.replace("./login.html");
