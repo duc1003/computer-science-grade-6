@@ -72,11 +72,17 @@
           window.addEventListener("hashchange", function() {
             let newHash = window.location.hash;
             // check have user yet?
-            // let checkHash = newHash.
-            change_practice(newHash);
-            $('#content').animate({
-              scrollTop: 0
-            }, 'fast');
+            let checkHash = newHash.substring(1)
+            let haveUser = localStorage.getItem("isUser");
+            if(!haveUser && checkHash > 3) {
+              alert("Mục này cần phải đăng nhập mới truy cập được!")
+              window.location.replace("./login.html");
+            } else {
+              change_practice(newHash);
+              $('#content').animate({
+                scrollTop: 0
+              }, 'fast');
+            }
           }); 
         }) 
       </script>

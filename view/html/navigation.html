@@ -1,38 +1,45 @@
 <div class="nav">
-    <div id="nav__logo">
-        <a href="./Home.html" class="nav__logo--link">Hỗ trợ môn tin học lớp 6</a>
-    </div>
-    <div id="nav__center">
-        <ul class="nav__center__content">
-            <li>
-                <a href="./home.html ">Trang chủ</a>
-            </li>
-            <li>
-                <a href="./examination.html">Bài học</a>
-            </li>
-            <li><a href="./practice.html">Bài tập</a></li>
-            <li><a href="./home.html">Tranh tài</a></li>
-            <li>
+  <div id="nav__logo">
+    <a href="./Home.html" class="nav__logo--link">Hỗ trợ môn tin học lớp 6</a>
+  </div>
+  <div id="nav__center">
+    <ul class="nav__center__content">
+      <li>
+        <a href="./home.html ">Trang chủ</a>
+      </li>
+      <li>
+        <a href="./examination.html">Bài học</a>
+      </li>
+      <li><a id="buttonPractice" href="#">Bài tập</a></li>
+      <li><a href="./home.html">Tranh tài</a></li>
+      <!-- <li>
                 <div class="search">
                     <input id="search" type="text" placeholder="Tìm kiếm ..." />
                     <i class="fas fa-search"></i>
                 </div>
-            </li>
-        </ul>
-    </div>
-    <div id="nav__login" class="nav__login">
-        <a href="./login.html">Đăng nhập</a>
-    </div>
+            </li> -->
+    </ul>
+  </div>
+  <div id="nav__login" class="nav__login">
+    <a href="./login.html">Đăng nhập</a>
+  </div>
 </div>
 <script>
-    console.log(localStorage.getItem("isUser"));
-    
-    
-    if(localStorage.getItem("isUser")) {
-        document.getElementById("nav__login").style.visibility = "hidden";
-        console.log(document.getElementById("nav__login").style.visibility);
+  console.log(localStorage.getItem("isUser"));
+
+  if (localStorage.getItem("isUser")) {
+    document.getElementById("nav__login").style.visibility = "hidden";
+    console.log(document.getElementById("nav__login").style.visibility);
+  } else {
+    document.getElementById("nav__login").style.visibility = "visible";
+    console.log(document.getElementById("nav__login").style.visibility);
+  }
+  $("#buttonPractice").click(() => {
+    if (localStorage.getItem("isUser")) {
+      window.location.replace("./practice.html");
     } else {
-        document.getElementById("nav__login").style.visibility = "visible";
-        console.log(document.getElementById("nav__login").style.visibility);
+      alert("Mục này cần phải đăng nhập mới truy cập được!");
+      window.location.replace("./login.html");
     }
+  });
 </script>
